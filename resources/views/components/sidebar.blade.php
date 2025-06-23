@@ -114,6 +114,12 @@
                     <div data-i18n="{{ __('menu.users') }}">{{ __('menu.users') }}</div>
                 </a>
             </li>
+        <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('surat.index') ? 'active' : '' }}">
+            <a href="{{ route('surat.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-notepad"></i>
+                <div data-i18n="Template Surat">Template Surat</div>
+            </a>
+        </li>
         @endif
     </ul>
 </aside>

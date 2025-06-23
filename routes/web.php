@@ -20,8 +20,31 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/pricing', function () {
+    return view('pricing');
+})->name('pricing');
+
+Route::get('/blog-details', function () {
+    return view('blog-details');
+})->name('blog-details');
+
+Route::get('/blog-grids', function () {
+    return view('blog-grids');
+})->name('blog-grids');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [\App\Http\Controllers\PageController::class, 'index'])->name('home');
+        Route::resource('surat', \App\Http\Controllers\SuratController::class);
+        Route::get('surat-template', [\App\Http\Controllers\SuratController::class, 'template'])->name('surat.template');
+        Route::get('surat/{surat}/print', [\App\Http\Controllers\SuratController::class, 'print'])->name('surat.print');
+        Route::get('surat/{surat}/pdf', [\App\Http\Controllers\SuratController::class, 'exportPdf'])->name('surat.pdf');
+        Route::post('surat/{surat}/status', [\App\Http\Controllers\SuratController::class, 'updateStatus'])->name('surat.status');
+        Route::get('api/surat-template', [\App\Http\Controllers\SuratController::class, 'getTemplate'])->name('surat.get-template');
+
 
     Route::resource('user', \App\Http\Controllers\UserController::class)
         ->except(['show', 'edit', 'create'])

@@ -30,13 +30,15 @@
           <div class="max-w-full px-4 w-60">
             <a href="index.html" class="block w-full py-5 navbar-logo">
               <img
-                src="assets/images/logo/logo.svg"
-                alt="logo"
+                 src="{{ asset('assets/images/logo/logo-arsipku.png') }}"
+                    alt="Logo Arsipku"
+                    style="max-height: 100px; "
                 class="w-full dark:hidden"
               />
               <img
-                src="assets/images/logo/logo-white.svg"
-                alt="logo"
+              src="{{ asset('assets/images/logo/logo-arsipku.png') }}"
+                    alt="Logo Arsipku"
+                    style="max-height: 100px; "
                 class="hidden w-full dark:block"
               />
             </a>
@@ -61,10 +63,10 @@
                 id="navbarCollapse"
                 class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6"
               >
-                <ul class="blcok lg:flex 2xl:ml-20">
+                   <ul class="blcok lg:flex 2xl:ml-20">
                   <li class="relative group">
                     <a
-                      href="#home"
+                      href="{{ route('landing') }}"
                       class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6"
                     >
                       Home
@@ -72,7 +74,7 @@
                   </li>
                   <li class="relative group">
                     <a
-                      href="/#about"
+                      href="{{ route('about') }}"
                       class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
                     >
                       About
@@ -80,7 +82,7 @@
                   </li>
                   <li class="relative group">
                     <a
-                      href="/#pricing"
+                     href="{{ route('pricing') }}"
                       class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
                     >
                       Pricing
@@ -88,7 +90,7 @@
                   </li>
                   <li class="relative group">
                     <a
-                      href="/#team"
+                      href="{{ route('landing') }}"
                       class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
                     >
                       Team
@@ -96,7 +98,7 @@
                   </li>
                   <li class="relative group">
                     <a
-                      href="/#contact"
+                      href="{{ route('contact') }}"
                       class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
                     >
                       Contact
@@ -104,16 +106,16 @@
                   </li>
                   <li class="relative group">
                     <a
-                      href="blog-grids.html"
+                      href="{{ route('blog-grids') }}"
                       class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6 xl:ml-10"
                     >
                       Blog
                     </a>
                   </li>
-                  <li class="relative submenu-item group">
+                   <li class="relative submenu-item group">
                     <a
                       href="javascript:void(0)"
-                      class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-primary group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 xl:ml-10"
+                      class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
                     >
                       Pages
 
@@ -134,43 +136,43 @@
                       class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full"
                     >
                       <a
-                        href="about.html"
+                        href="{{ route('about') }}"
                         class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         About Page
                       </a>
                       <a
-                        href="pricing.html"
+                        href="{{ route('pricing') }}"
                         class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Pricing Page
                       </a>
                       <a
-                        href="contact.html"
+                        href="{{ route('contact') }}"
                         class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Contact Page
                       </a>
                       <a
-                        href="blog-grids.html"
+                        href="{{ route('blog-grids') }}"
                         class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Blog Grid Page
                       </a>
                       <a
-                        href="blog-details.html"
-                        class="block rounded-sm px-4 py-[10px] text-sm text-primary hover:text-primary dark:hover:text-primary"
+                        href="{{ route('blog-details') }}"
+                        class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Blog Details Page
                       </a>
                       <a
-                        href="signup.html"
+                        href="{{ route('login') }}"
                         class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Sign Up Page
                       </a>
                       <a
-                        href="signin.html"
+                        href="{{ route('login') }}"
                         class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
                       >
                         Sign In Page
@@ -1314,9 +1316,10 @@
                 class="mb-6 inline-block max-w-[160px]"
               >
                 <img
-                  src="assets/images/logo/logo-white.svg"
-                  alt="logo"
-                  class="max-w-full"
+                   src="{{ asset('assets/images/logo/logo-arsipku.png') }}"
+                    alt="Logo Arsipku"
+                    class="img-fluid header-logo"
+                    style="max-height: 100px; "
                 />
               </a>
               <p class="mb-8 max-w-[270px] text-base text-gray-7">
